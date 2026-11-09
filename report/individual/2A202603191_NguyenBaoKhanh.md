@@ -7,7 +7,7 @@
 - Email: baokhanh16122003@gmail.com
 - Lớp: K5 Level 2A
 - Link repo bài làm: https://github.com/NBK1612/K5-L2A-DAY02-NguyenBaoKhanh-2A202603191-ObjectDetection
-- Link Colab đã chạy:
+- Link Colab đã chạy: https://colab.research.google.com/drive/1y2cEZ3WsjL9bv35YB4vuT6hp_CIX6FyV
 
 ## 2. Schema và mini guideline
 
@@ -61,6 +61,8 @@ Nguyên nhân F1 thấp, khi ghép box đã gán với gold theo vị trí (IoU 
 | mAP50–95                |   0.202 |
 
 Theo từng lớp: car có recall 0.636 và mAP50 0.739, truck có recall 0.200 và mAP50 0.239, bus có recall 0 và mAP50 0.008, van có recall 0.083 và mAP50 0.103.
+
+Theo results.csv, mAP50 trên eval cao nhất ở epoch 1 (0.272), sau đó giảm còn khoảng 0.17 đến 0.22 ở các epoch sau, nên best.pt là model gần như chưa học từ nhãn train. Train càng lâu thì model càng học theo nhãn train, mà nhãn train lệch với nhãn eval (xe buýt gán bus nhưng eval ghi van, có gán xe đỗ nhưng eval không gán, còn box trùng). Điều này cho thấy nhãn không nhất quán làm model học tệ đi.
 
 Ảnh và số liệu: [ảnh dự đoán trên eval](assets/eval_predictions/visuals/), [confusion matrix](assets/yolo26_runs/vehicle_eval/confusion_matrix.png), [results.csv](assets/yolo26_runs/vehicle_annotation/results.csv), [metrics](assets/model_eval_metrics.json).
 
