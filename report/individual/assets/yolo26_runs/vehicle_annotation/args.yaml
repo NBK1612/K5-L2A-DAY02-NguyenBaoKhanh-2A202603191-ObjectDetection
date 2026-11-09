@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolo26n.pt
-data: Day2-Lab\data.yaml
+data: /content/Day2-Lab/data.yaml
 epochs: 50
 time: null
 patience: 100
@@ -12,7 +12,7 @@ save_period: -1
 cache: false
 device: "0"
 workers: 8
-project: Day2-Lab\outputs\yolo26_runs
+project: /content/Day2-Lab/outputs/yolo26_runs
 name: vehicle_annotation
 exist_ok: true
 pretrained: true
@@ -112,4 +112,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: tracktrack.yaml
-save_dir: C:\Users\baokh\K5-L2-DAY01\runs\detect\Day2-Lab\outputs\yolo26_runs\vehicle_annotation
+save_dir: /content/Day2-Lab/outputs/yolo26_runs/vehicle_annotation

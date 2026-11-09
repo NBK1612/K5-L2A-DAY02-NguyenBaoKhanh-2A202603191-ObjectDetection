@@ -1,8 +1,8 @@
 {
-  "precision": 0.20523414426273145,
-  "recall": 0.30565990891143213,
-  "map50": 0.3019276556362171,
-  "map50_95": 0.21621536063827967,
+  "precision": 0.41010614003351986,
+  "recall": 0.22981721226162247,
+  "map50": 0.27193440295574317,
+  "map50_95": 0.20155101272869613,
   "eval_images": 10,
-  "checkpoint": "C:\\Users\\baokh\\K5-L2-DAY01\\runs\\detect\\Day2-Lab\\outputs\\yolo26_runs\\vehicle_annotation\\weights\\best.pt"
+  "checkpoint": "/content/Day2-Lab/outputs/yolo26_runs/vehicle_annotation/weights/best.pt"
 }
