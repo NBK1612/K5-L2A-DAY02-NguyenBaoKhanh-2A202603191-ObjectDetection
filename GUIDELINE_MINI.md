@@ -22,6 +22,6 @@
 
 | Ảnh         | Tình huống | Quyết định cuối | Lý do theo schema |
 | ----------- | ---------- | --------------- | ----------------- |
-| `drive_...` |            |                 |                   |
-| `drive_...` |            |                 |                   |
-| `drive_...` |            |                 |                   |
+| `drive_001` | Xe trắng vuông vức đỗ trước tòa nhà (giữa-trái ảnh), nhãn nháp ghi `truck`; không rõ là van, SUV hay xe tải nhỏ | `car` | Không thấy thùng hàng tách rời cabin nên không phải `truck`; có capo, kích thước ngang các xe con bên cạnh nên chọn `car` thay vì `van` |
+| `drive_001` | Dãy xe đỗ trong bãi/vỉa hè bên trái và xe rất nhỏ ở xa góc trên phải, không nằm trên lòng đường | Gán theo loại xe (`car`). Đã hỏi giảng viên: xe đỗ ngoài lòng đường **có gán** | Schema ghi "xe đang đỗ vẫn gán theo loại xe"; giảng viên xác nhận áp dụng cả cho xe đỗ ngoài lòng đường. Nhãn eval `drive_052` không gán dãy xe đỗ bên trái, nên đã hỏi để thống nhất |
+| `drive_052` (eval) | Xe buýt hai tầng ở giữa ảnh, nhưng nhãn eval ghi lớp `3` (`van`) | `bus`. Đã hỏi giảng viên: xe buýt hai tầng là `bus`. Không sửa nhãn eval | Schema: `bus` là xe buýt chở khách; `van` là xe van/minivan. Xe dài, nhiều cửa sổ, chở khách nên là `bus`; giảng viên xác nhận |
